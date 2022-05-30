@@ -8,6 +8,7 @@ public class App {
         ArrayList<Integer> arrayList = new ArrayList<>();
         fillArrayList(arrayList);
         checkForPair(arrayList);
+        orderedPair(arrayList);
     }
     public static void fillArrayList(ArrayList<Integer> arrayList){
         int selection;
@@ -37,6 +38,16 @@ public class App {
     public static  void checkForPair(ArrayList<Integer> arl){
         if(arl.size() % 2 != 0){
             arl.remove(arl.size() - 1);
+        }
+    }
+    public static void orderedPair(ArrayList<Integer> arl){
+        for(int i = 1; i < arl.size();){
+            if(arl.get(i) < arl.get(i-1)){
+                arl.remove(i - 1);
+                arl.remove(i - 1);
+            }else{
+                i += 2;
+            }
         }
     }
 }
