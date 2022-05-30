@@ -5,11 +5,26 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        run();
+    }
+
+
+
+
+
+
+
+
+
+
+    private static void run() {
         ArrayList<Integer> arrayList = new ArrayList<>();
         fillArrayList(arrayList);
         checkForPair(arrayList);
         orderedPair(arrayList);
+        printArrayList(arrayList);
     }
+
     public static void fillArrayList(ArrayList<Integer> arrayList){
         int selection;
         do {
@@ -48,6 +63,11 @@ public class App {
             }else{
                 i += 2;
             }
+        }
+    }
+    public static void printArrayList(ArrayList<Integer> arl){
+        for(int i = 1; i < arl.size(); i += 2){
+            System.out.print("{" + arl.get(i - 1) + "," + arl.get(i) + "}");
         }
     }
 }
