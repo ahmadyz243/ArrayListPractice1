@@ -7,6 +7,7 @@ public class App {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>();
         fillArrayList(arrayList);
+        checkForPair(arrayList);
     }
     public static void fillArrayList(ArrayList<Integer> arrayList){
         int selection;
@@ -31,6 +32,11 @@ public class App {
             }catch (Exception e){
                 System.out.println("you should enter numbers:");
             }
+        }
+    }
+    public static  void checkForPair(ArrayList<Integer> arl){
+        if(arl.size() % 2 != 0){
+            arl.remove(arl.size() - 1);
         }
     }
 }
